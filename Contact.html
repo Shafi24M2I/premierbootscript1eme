@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier d’achat - Dark Mode</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="contact-container">
+        <!-- En-tête -->
+        <div class="contact-header">
+          <h1><i class="bi bi-envelope-heart"></i> Contactez-nous</h1>
+          <p>
+            Remplissez le formulaire ci-dessous et nous vous répondrons
+            rapidement
+          </p>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <form id="contactForm" novalidate>
+          <!-- Section Informations personnelles -->
+          <h4 class="section-title">
+            <i class="bi bi-person-circle"></i> Informations personnelles
+          </h4>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nom"
+                  name="nom"
+                  placeholder="Nom"
+                  required
+                />
+                <label for="nom"><i class="bi bi-person"></i> Nom *</label>
+                <div class="invalid-feedback">Veuillez saisir votre nom.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="prenom"
+                  name="prenom"
+                  placeholder="Prénom"
+                  required
+                />
+                <label for="prenom"
+                  ><i class="bi bi-person-plus"></i> Prénom *</label
+                >
+                <div class="invalid-feedback">
+                  Veuillez saisir votre prénom.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email"
+                  ><i class="bi bi-envelope"></i> Email *</label
+                >
+                <div class="invalid-feedback">
+                  Veuillez saisir une adresse email valide.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-telephone"></i
+                ></span>
+                <input
+                  type="tel"
+                  class="form-control age-input"
+                  id="telephone"
+                  name="telephone"
+                  placeholder="Numéro de téléphone"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Veuillez saisir votre numéro de téléphone.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section Informations démographiques -->
+          <h4 class="section-title">
+            <i class="bi bi-globe"></i> Informations démographiques
+          </h4>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  id="nationalite"
+                  name="nationalite"
+                  required
+                >
+                  <option value="">Choisir une nationalité</option>
+                  <option value="francaise">Afghanistan</option>
+                  <option value="francaise">Française</option>
+                  <option value="allemande">Allemande</option>
+                  <option value="espagnole">Espagnole</option>
+                  <option value="italienne">Italienne</option>
+                  <option value="belge">Belge</option>
+                  <option value="suisse">Suisse</option>
+                  <option value="canadienne">Canadienne</option>
+                  <option value="americaine">Américaine</option>
+                  <option value="britannique">Britannique</option>
+                  <option value="marocaine">Marocaine</option>
+                  <option value="algerienne">Algérienne</option>
+                  <option value="tunisienne">Tunisienne</option>
+                  <option value="autre">Autre</option>
+                </select>
+                <label for="nationalite"
+                  ><i class="bi bi-flag"></i> Nationalité *</label
+                >
+                <div class="invalid-feedback">
+                  Veuillez sélectionner votre nationalité.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-calendar"></i
+                ></span>
+                <input
+                  type="number"
+                  class="form-control age-input"
+                  id="age"
+                  name="age"
+                  placeholder="Âge"
+                  min="1"
+                  max="120"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Veuillez saisir un âge valide (1-120 ans).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section Genre -->
+          <h4 class="section-title">
+            <i class="bi bi-gender-ambiguous"></i> Genre
+          </h4>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="genre"
+                  id="homme"
+                  value="homme"
+                  required
+                />
+                <label class="form-check-label" for="homme">
+                  <i class="bi bi-gender-male"></i> Homme
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="genre"
+                  id="femme"
+                  value="femme"
+                  required
+                />
+                <label class="form-check-label" for="femme">
+                  <i class="bi bi-gender-female"></i> Femme
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="genre"
+                  id="autre-genre"
+                  value="autre"
+                  required
+                />
+                <label class="form-check-label" for="autre-genre">
+                  <i class="bi bi-gender-ambiguous"></i> Autre
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="genre"
+                  id="non-precise"
+                  value="non-precise"
+                  required
+                />
+                <label class="form-check-label" for="non-precise">
+                  <i class="bi bi-question-circle"></i> Préfère ne pas préciser
+                </label>
+              </div>
+              <div
+                class="invalid-feedback d-block"
+                id="genre-error"
+                style="display: none !important"
+              >
+                Veuillez sélectionner votre genre.
+              </div>
+            </div>
+          </div>
+
+          <!-- Section Message -->
+          <h4 class="section-title"><i class="bi bi-chat-dots"></i> Message</h4>
+
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              placeholder="Votre message"
+              style="height: 120px"
+            ></textarea>
+            <label for="message"
+              ><i class="bi bi-chat-text"></i> Votre message (optionnel)</label
+            >
+          </div>
+
+          <!-- Acceptation des conditions -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="conditions"
+              name="conditions"
+              required
+            />
+            <label class="form-check-label" for="conditions">
+              J'accepte les
+              <a href="#" class="text-decoration-none"
+                >conditions d'utilisation</a
+              >
+              et la
+              <a href="#" class="text-decoration-none"
+                >politique de confidentialité</a
+              >
+              *
+            </label>
+            <div class="invalid-feedback">
+              Vous devez accepter les conditions d'utilisation.
+            </div>
+          </div>
+
+          <!-- Boutons -->
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-submit">
+                <i class="bi bi-send"></i> Envoyer le message
+              </button>
+            </div>
+            <div class="col-md-6">
+              <button type="reset" class="btn btn-reset">
+                <i class="bi bi-arrow-clockwise"></i> Réinitialiser
+              </button>
+            </div>
+          </div>
+
+          <!-- Message de succès -->
+          <div class="success-message" id="successMessage">
+            <h5>
+              <i class="bi bi-check-circle"></i> Message envoyé avec succès !
+            </h5>
+            <p>Nous vous répondrons dans les plus brefs délais.</p>
+          </div>
+        </form>
+
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <h5><i class="bi bi-info-circle"></i> Nos coordonnées</h5>
+          <p>
+            <i class="bi bi-geo-alt"></i> 123 Rue de l'Exemple, 75001 Paris,
+            France
+          </p>
+          <p><i class="bi bi-telephone"></i> +33 1 23 45 67 89</p>
+          <p><i class="bi bi-envelope"></i> contact@afgsite.com</p>
+          <p><i class="bi bi-clock"></i> Lundi - Vendredi : 9h00 - 18h00</p>
+        </div>
+      </div>
+    </div>
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 Pays Info. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="page.html" class="text-white me-3"><i class="fas fa-home"></i> Accueil</a>
+                  
+                </div>
+            </div>
+        </div>
+    </foote
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
