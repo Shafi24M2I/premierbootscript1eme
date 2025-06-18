@@ -42,11 +42,11 @@
         }
 
         // Recherche avec Enter
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
+        // document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        //     if (e.key === 'Enter') {
+        //         performSearch();
+        //     }
+        // });
 
         // Animation du logo
         function animateLogo() {
